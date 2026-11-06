@@ -14,27 +14,6 @@ brew install node unzip
 
 ---
 
-## PHP Stubs for WordPress & WooCommerce (IDE Support)
-
-**macOS:** Install Composer first if not present:
-```bash
-brew install composer
-```
-
-Install the stubs in your project folder (not inside the theme folder you upload):
-
-```bash
-composer require --dev php-stubs/wordpress-stubs php-stubs/woocommerce-stubs
-```
-
-In VS Code, make sure Intelephense can see them. It indexes the workspace, so if the `vendor/` folder is inside the opened folder, it usually picks them up. If it doesn't, add this to your VS Code settings:
-
-```json
-"intelephense.environment.includePaths": [
-  "vendor/php-stubs/wordpress-stubs",
-  "vendor/php-stubs/woocommerce-stubs"
-]
-```
 
 ---
 
@@ -101,6 +80,30 @@ npx @wp-playground/cli@latest server --auto-mount --blueprint=../blueprint.json 
 
 **Import products in Playground:**
 1. WP Admin → WooCommerce → Products → Import → Choose `products-export.csv` → Run
+
+
+## PHP Stubs for WordPress & WooCommerce (IDE Support)
+
+**macOS:** Install Composer first if not present:
+```bash
+brew install composer
+```
+
+Install the stubs in your project folder (not inside the theme folder you upload):
+
+```bash
+composer require --dev php-stubs/wordpress-stubs php-stubs/woocommerce-stubs
+```
+
+In VS Code, make sure Intelephense can see them. It indexes the workspace, so if the `vendor/` folder is inside the opened folder, it usually picks them up. If it doesn't, add this to your VS Code settings:
+
+```json
+"intelephense.environment.includePaths": [
+  "vendor/php-stubs/wordpress-stubs",
+  "vendor/php-stubs/woocommerce-stubs"
+]
+```
+
 
 ---
 
